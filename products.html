@@ -1,0 +1,47 @@
+<!doctype html>
+
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function benchchange(num) {
+            var bench = 'images/bench' + num + '.jpg';
+            document.getElementById("mainimg").src= bench;
+            
+            if(num == 1){
+               document.innerHTML.getElementById('info') = 'Testing 1'
+            }
+            if(num == 2){
+               document.innerHTML.getElementById('info') = 'Testing 2'
+            }
+        }
+    </script>
+ <title>layout</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <ul class="nav">
+            <li><img src="images/WebPro.png"></li>
+            <li><a href="index.html">home</a></li>
+            <li><a href="products.html">products</a></li>
+            <li><a href="about.html">about</a></li>
+            <li><a href="index.html">Contacts</a></li>
+        </ul>
+        <div class="content">
+            <header>
+                <h1>Custom CounterTops</h1>
+                <h2>Creating quality Custom CounterTops for over ten years</h2>
+            </header>
+            <div class="bench">
+                <img id="mainimg" src="images/bench1.jpg">
+<!--                <p id="info"></p>-->
+            </div>
+            <ul class="benches">
+                <li onclick="benchchange(1)"><img src="images/bench1.jpg"></li>
+                <li onclick="benchchange(2)"><img src="images/bench2.jpg"></li>
+                <li onclick="benchchange(3)"><img src="images/bench3.jpg"></li>
+                <li onclick="benchchange(4)"><img src="images/bench4.jpg"></li>
+            </ul>
+        </div>
+    </div>
+</body>
